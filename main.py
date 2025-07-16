@@ -3,8 +3,7 @@ from fastapi.security import OAuth2PasswordBearer
 from app.routes import auth, autosnap
 
 # OAuth2 token setup (used for dependency injection in routes)
-oauth2_scheme = OAuth2PasswordBearer(tokenUrl="login")
-
+oauth2_scheme = OAuth2PasswordBearer(tokenUrl="/auth/login")
 # Initialize FastAPI app
 app = FastAPI()
 

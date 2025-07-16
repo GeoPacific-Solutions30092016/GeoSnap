@@ -5,7 +5,7 @@ from fastapi.security import OAuth2PasswordBearer
 pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
 
 # 🔑 OAuth2 dependency for token-based authentication
-oauth2_scheme = OAuth2PasswordBearer(tokenUrl="login")
+oauth2_scheme = OAuth2PasswordBearer(tokenUrl="/auth/login")
 
 def hash_password(password: str) -> str:
     """Hash a plain password using bcrypt."""
